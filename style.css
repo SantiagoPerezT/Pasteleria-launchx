@@ -1,0 +1,450 @@
+:root {
+    --very-light-pink: #c7c7c7;
+    --text-input-field: #f7f7f7;
+    --Hospital-green: #acd9b2;
+    --Logo-pink: #F3AB99;
+    --White: #FFFFFF;
+    --Black: #000000;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+    --logo-size: 75px;
+    --card-size: 550px;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0px;
+}
+
+/*Barra de Navegacion*/
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--very-light-pink);
+}
+
+.icon-menu {
+    display: none;
+}
+
+.logo {
+    width: var(--logo-size);
+    margin-right: 10px;
+}
+
+.navbar-left {
+    display: flex;
+}
+
+.navbar-left ul {
+    margin-left: 12px;
+}
+
+.navbar-right {
+    padding-right: 20px;
+}
+
+.navbar-left ul,
+.navbar-right ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding-top: 7px;
+}
+
+.navbar-left ul li a,
+.navbar-right ul li a {
+    text-decoration: none;
+    color: var(--very-light-pink);
+    border: 1px solid var(--White);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.navbar-left ul li a {
+    padding: 8px 15px 8px 15px;
+}
+
+
+.navbar-left ul li a:hover,
+.navbar-right ul li a:hover {
+    border: 1px solid var(--Logo-pink);
+    color: var(--Logo-pink);
+}
+
+.navbar-right ul li a img {
+    position: relative;
+    top: 5px;
+}
+
+.navbar-email {
+    color: var(--very-light-pink);
+    font-size: var(--sm);
+}
+
+.navbar-shopping-icon {
+    position: relative;
+    top: -3px;
+
+}
+
+.navbar-shopping-icon div {
+    width: 16px;
+    height: 16px;
+    background-color: var(--Logo-pink);
+    border-radius: 50%;
+    font-size: var(--sm);
+    font-weight: bold;
+    position: absolute;
+    top: -2px;
+    right: -1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--White);
+}
+
+/*Contenido*/
+
+.cards-container {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--card-size));
+    gap: 50px;
+    place-content: center;
+}
+
+.product-card {
+    width: var(--card-size);
+    height: 800px;
+}
+
+.product-card img {
+    width: var(--card-size);
+    height: var(--card-size);
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.product-info figure {
+    margin: 0px;
+}
+
+.product-info figure img {
+    width: 35px;
+    height: 35px;
+}
+
+.product-info div p:nth-child(1) {
+    font-weight: bold;
+    font-size: var(--md);
+    margin: 0px;
+    margin-top: 0px;
+    margin-bottom: 4px;
+}
+
+.product-info div p:nth-child(2) {
+    font-weight: bold;
+    font-size: var(--sm);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: var(--very-light-pink);
+}
+
+/*Pedidos*/
+
+.form-container {
+    width: 100%;
+    background: #fffbd5;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b20a2c, #fffbd5);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b20a2c, #fffbd5);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    height: 550px;
+}
+
+.form {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-left,
+.form-right {
+    width: 100%;
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+.form-left img{
+    width: 550px;
+    height: 600px;
+    padding-bottom: 40px;
+}
+
+.form-right{
+    height: 530px;
+}
+
+.form-right h1{
+    margin: 0px;
+    height: 25px;
+    margin-top: 20px;
+}
+
+
+.controls {
+    width: 49%;
+    background: var(--White);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid var(--White);
+    font-family: 'calibri';
+    font-size: 18px;
+    color: var(--Black);
+  }
+
+
+.checkbox1 label, .checkbox2 label {
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    position: relative;
+    padding: 5px 25px 5px 51px;
+    font-size: var(--md);
+    border-radius: 5px;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.checkbox1 label:hover, .checkbox2 label:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.checkbox1 label:before, .checkbox2 label:before {
+    content: "";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    left: 15px;
+    border-radius: 50%;
+    background: none;
+    border: 3px solid white;
+}
+
+.checkbox1 label:before, .checkbox2 label:before {
+    border-radius: 3px;
+}
+
+.checkbox1 input[type="checkbox"], .checkbox2 input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox1 input[type="checkbox"]:checked+label:before, .checkbox2 input[type="checkbox"]:checked+label:before {
+    display: none;
+}
+
+.checkbox1 input[type="checkbox"]:checked+label, .checkbox2 input[type="checkbox"]:checked+label {
+    background: var(--Hospital-green);
+    color: #fff;
+    padding: 5px 15px;
+}
+
+
+.image-form img {
+    width: 100%;
+}
+
+.button-send{
+    width: 100%;
+}
+
+.primary-button{
+    background-color: var(--Hospital-green);
+    border-radius: 8px;
+    border: none;
+    color: var(--White);
+    width: 60%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+    margin-top: 20px;
+  }
+
+  /*Pie de pagina*/
+
+.footer{
+    display: grid;
+    place-content: center;
+    width: 100%;
+    height: 470px;
+    margin-top: 50px;
+    background: var(--Logo-pink);
+    color: white;
+    overflow: hidden;
+}
+
+.footer .wrap > div{
+    float: left;
+    width: 320px;
+    height: 370px;
+    margin: 0 40px 40px 40px;
+    text-align: center;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.footer a{
+    text-decoration: none;
+    color: var(--White);
+    transition: all 300ms;
+}
+/*Encabezados del pie*/
+.footer h5{
+ display: block;
+ background: url(../img/pxgray.png), white;
+ height: 50px;
+ letter-spacing: 2px;
+ text-align: center;
+ font-family: "BebasNeue"; 
+ font-size: 30px;
+ line-height: 55px;
+ color: black;
+ border-radius: 5px;
+ margin-top: 15px;
+ margin-bottom: 15px;
+}
+/*Final del encabezado*/
+
+/*Menu*/
+.footer ul{
+    text-align: left;
+    margin: 20px;
+    font-size: 25px;
+}
+
+.footer ul li{
+    margin-top: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.footer ul li a{
+    display: block;
+    height: 40px;
+    transition: all 300ms;
+
+}
+
+.footer ul li:hover a{
+    padding-left: 40px;
+    color: var(--White);
+    width: 100%;
+}
+
+/*Donde estamos?*/
+
+.footer iframe{
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 5px solid var(--White);
+    box-shadow: 0px 0px 5px gray;
+}
+
+/*lo restante*/
+
+.footer img{
+    margin-bottom: 15px;
+}
+
+.footer .browsers img{
+    width: 45px;
+}
+
+.info p{
+    margin-top: 0px;
+}
+
+.info img{
+    border-radius: 10px;
+    width:  300px;
+    margin-bottom: 0px;
+
+}
+
+@media (max-width:1200px) {
+    .form-left{
+        display: none;
+    }
+
+    .wrap{
+        width: 90%;
+    }
+
+    .footer{
+        height: auto;
+        padding-bottom: 100px;
+        
+        padding-left: 20px;
+    }
+
+    .footer .wrap > div{
+        width: 100%;
+        margin: 0px auto;
+        margin-top: 20px;
+    }
+
+    .info{
+        padding-top: 35px;
+    }
+}
+
+@media (max-width:730px) {
+    :root {
+        --card-size: 350px;
+    }
+
+    .icon-menu {
+        display: block;
+    }
+
+    nav{
+        padding: 10px;
+    }
+
+    .navbar-left ul {
+        display: none;
+    }
+
+    .navbar-email {
+        display: none;
+    }
+
+    .product-card {
+        height: 500px;
+        padding-bottom: 75px;
+    }
+}
